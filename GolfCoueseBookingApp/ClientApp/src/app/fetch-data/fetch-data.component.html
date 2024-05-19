@@ -1,0 +1,174 @@
+<!--<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Temp. (C)</th>
+      <th>Temp. (F)</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forecast of forecasts">
+      <td>{{ forecast.date }}</td>
+      <td>{{ forecast.temperatureC }}</td>
+      <td>{{ forecast.temperatureF }}</td>
+      <td>{{ forecast.summary }}</td>
+    </tr>
+  </tbody>
+</table>-->
+<!--<h1>Golf Course  Information Registration</h1>-->
+<!--
+<form (ngSubmit)="addCourse()">
+  <div class="form-group">
+    <label for="userId">User ID</label>
+    <input type="text" class="form-control" id="userId" [(ngModel)]="courseModel.UserId" name="userId" value="1">
+  </div>
+  <div class="form-group">
+    <label for="name">Golf Course</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="courseModel.CourseName" name="name">
+  </div>
+  <div class="form-group">
+    <label for="url">Golf Course URL</label>
+    <input type="text" class="form-control" id="url" [(ngModel)]="courseModel.CourseURL" name="url">
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" id="address" [(ngModel)]="courseModel.Address" name="address">
+  </div>
+  <div class="form-group">
+    <label for="phone">TelephoneNumber</label>
+    <input type="text" class="form-control" id="phone" [(ngModel)]="courseModel.TelephoneNumber" name="phone">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" id="description" [(ngModel)]="courseModel.Description" name="description"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="postItem()">Add</button>
+</form>
+  -->
+<!--<h2>Registered Golf Courses</h2>
+
+<p *ngIf="!courses"><em>Loading...</em></p>
+
+<table class="table" *ngIf="courses">
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Golf Course</th>
+      <th>URL</th>
+      <th>Address</th>
+      <th>Telephone Number</th>
+      <th>Description</th>
+      <th>Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.UserId }}</td>
+      <td>{{ course.CourseName }}</td>
+      <td>{{ course.CourseURL }}</td>
+      <td>{{ course.Address }}</td>
+      <td>{{ course.Description }}</td>
+      <td>{{ course.TelephoneNumber }}</td>
+      <td>-->
+<!--<button class="btn btn-info" (click)="editCourse(course)">Update</button>
+<button class="btn btn-danger" (click)="course.CourseId !== undefined ? deleteCourse(course.CourseId) : null">Delete</button>
+  -->
+<!--</td>
+  </tr>
+</tbody>
+  </table>-->
+
+
+
+
+
+
+<!---->
+<h1 id="tableLabel">Registered Golf Courses</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<button type="submit" class="btn btn-success" (click)="addGolfCourse()">Add Golf Course</button>
+<table class='table table-bordered' aria-labelledby="tableLabel">
+  <tr>
+    <th>User Id</th>
+    <th>Course Name</th>
+    <th>Course URL</th>
+    <th>Address</th>
+    <th>Description</th>
+    <th>Telephone Number</th>
+  </tr>
+  <tr>
+    <td>
+
+      <textarea id="UserId" class="full-width full-height"></textarea>
+    </td>
+    <td>
+
+      <textarea id="CourseName" class="full-width full-height"></textarea>
+    </td>
+    <td>
+
+      <textarea id="CourseURL" class="full-width full-height"></textarea>
+    </td>
+    <td>
+      <textarea id="Address" class="full-width full-height"></textarea>
+    </td>
+    <td>
+      <textarea id="Description" class="full-width full-height"></textarea>
+    </td>
+    <td>
+      <textarea id="TelephoneNumber" class="full-width full-height"></textarea>
+    </td>
+  </tr>
+</table>
+<br />
+
+<p *ngIf="!golfCourses"><em>Loading...</em></p>
+
+<!-- Table to Display Registered Golf Courses -->
+<table class="table table-bordered" aria-labelledby="tableLabel" *ngIf="golfCourses">
+  <thead>
+    <tr>
+      <th>Course Id</th>
+      <th>User Id</th>
+      <th>Course Name</th>
+      <th>Course URL</th>
+      <th>Address</th>
+      <th>Description</th>
+      <th>Telephone Number</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of golfCourses">
+      <td>{{ course.courseId }}</td>
+      <td>{{ course.userId }}</td>
+      <td>{{ course.courseName }}</td>
+      <td>{{ course.courseURL }}</td>
+      <td>{{ course.address }}</td>
+      <td>{{ course.description }}</td>
+      <td>{{ course.telephoneNumber }}</td>
+      <td>
+        <button type="button" class="btn btn-warning" (click)="updateGolfCourse(course)">Edit</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="deleteGolfCourse(course.courseId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
